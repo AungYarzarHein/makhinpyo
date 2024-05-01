@@ -1,8 +1,8 @@
 import express from "express";
 import "dotenv/config";
 
-// import { db } from "./firebase_config.js";
-// import { Firestore, collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { db } from "./config.js";
+import { Firestore, collection, doc, getDoc, getDocs } from "firebase/firestore";
 
 
 const app = express();
@@ -13,11 +13,11 @@ app.set("view engine","ejs") ;
 
 
 app.get("/",async (req,res) => {
-    // const headerData = await getDoc(doc(db,"post-header","post1"))
-    // const data = await getDoc(doc(db,"details","post1")) ;
+    const headerData = await getDoc(doc(db,"post-header","post1"))
+    const data = await getDoc(doc(db,"details","post1")) ;
    
-    // res.render("index",{data:data.data().data , headerData:headerData.data()});
-    res.render("index",{text:"What the fuck is that"})
+    res.render("index",{data:data.data().data , headerData:headerData.data()});
+    // res.render("index",{headerData:})
 
 })
 

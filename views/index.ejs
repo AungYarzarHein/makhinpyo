@@ -3,12 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Ma Khin Pyo </title>
+    <link rel="stylesheet" href="/index.css" />
 </head>
 <body>
-    
-    <h1>
-        <%=text %>
-    </h1>
+    <div class="mainBody"   >
+        <nav class="nav" >
+            <span class="navTitle" > A Pyo Lay Version1.0 </span>
+        </nav>
+
+        <div class="contentBody">
+            
+            <img src=<%=locals.headerData.imageUrl %> alt="headrImage" class="image">
+            <h3> <%=locals.headerData.title %> </h3>
+            
+            <div class="card">
+                <!-- image goes here -->
+                <!-- <div class="image"> -->
+                <img class="image" src=<%=locals.data[0].downloadUrl %>  />
+                <!-- </div> -->
+                <h4> <%=locals.data[0].title %> </h4>
+                <p class="cardText">
+                    <%=locals.data[0].details %>
+                </p>
+            </div>
+
+            <div class="card">
+                <!-- image goes here -->
+                <!-- <div class="image"> -->
+                <img class="image" src=<%=locals.data[1].downloadUrl %>  />
+                <!-- </div> -->
+                <h4> <%=locals.data[1].title %> </h4>
+                <p class="cardText">
+                    <%=locals.data[1].details %>
+                </p>
+            </div>
+
+            <div class="card">
+                <!-- image goes here -->
+                <!-- <div class="image"> -->
+                <img class="image" src=<%=locals.data[2].downloadUrl %>  />
+                <!-- </div> -->
+                <h4> <%=locals.data[2].title %> </h4>
+                <p class="cardText">
+                    <%=locals.data[2].details %>
+                </p>
+            </div>
+
+            <div class="card">
+                <!-- image goes here -->
+                <!-- <div class="image"> -->
+                <img class="image" src=<%=locals.data[3].downloadUrl %>  />
+                <!-- </div> -->
+                <h4> <%=locals.data[3].title %> </h4>
+                <p class="cardText">
+                    <%=locals.data[3].details %>
+                </p>
+            </div>
+
+            <div class="card">
+                <!-- image goes here -->
+                <!-- <div class="image"> -->
+                <img class="image" src=<%=locals.data[4].downloadUrl %>  />
+                <!-- </div> -->
+                <h4> <%=locals.data[4].title %> </h4>
+                <p class="cardText">
+                    <%=locals.data[4].details %>
+                </p>
+            </div>
+
+
+            
+        </div>
+
+        <div class="footer">
+            <h4> A Pyo Lay Version 1.00 </h4>
+            <h6>Thank you for visiting</h6>
+        </div>
+    </div>
+
+    <!-- <button id="fuck"  > FUck to New Page </button> -->
+
+    <!-- <script src="/js/index.js" ></script> -->
 </body>
 </html>
