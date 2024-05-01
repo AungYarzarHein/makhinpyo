@@ -8,7 +8,7 @@ import "dotenv/config";
 const app = express();
 
 app.use(express.static("public"));
-// app.set("view engine","ejs") ;
+app.set("view engine","ejs") ;
 // app.set("views","views")
 
 
@@ -17,7 +17,7 @@ app.get("/",async (req,res) => {
     // const data = await getDoc(doc(db,"details","post1")) ;
    
     // res.render("index",{data:data.data().data , headerData:headerData.data()});
-    res.send("Hello MaKhinPyo")
+    res.render("index",{text:"What the fuck is that"})
 
 })
 
