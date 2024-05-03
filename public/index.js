@@ -1,5 +1,5 @@
 console.log("Javascript from client side");
-const btn = document.getElementById("fuck");
+const btn = document.getElementById("btn");
 console.log(btn.innerText)
 
 const onPressHandler = () => {

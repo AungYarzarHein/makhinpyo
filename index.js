@@ -22,6 +22,18 @@ app.get("/",async (req,res) => {
 })
 
 
+app.get("/posts/:postId",async(req,res) => {
+    const postId = req.params.postId ;
+    const data = await getDoc(doc(db,"dest",postId))
+    res.render("post",{linkUrl:data.data().destlink});
+})
+
+
+app.get("/:postNam",async(req,res) => {
+    res.render("prePost",{postNam:req.params.postNam})
+})
+
+
 // app.get("/post/:dayNumber/:postId",(req,res) => {
 //     res.render("post",{dayNumber:req.params.dayNumber,postId:req.params.postId})
 // })
