@@ -86,8 +86,8 @@ body {
     padding: 2rem;
 }
 
-#btn {
-    background-color: rgb(89, 87, 77);
+#button {
+    /* background-color: rgb(89, 87, 77); */
     padding: 2rem;
     font-size: 1.2rem;
     min-width: 240px;
@@ -95,8 +95,19 @@ body {
     border-radius: .5rem;
     outline: none;
     border: none;
-    display: flex;
+    display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
     gap: 1rem;
+}
+
+
+#btn {
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: rgb(218, 186, 248);
+    border: none;
+    outline: none;
 }

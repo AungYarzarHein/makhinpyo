@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Ma Khin Pyo , remember me everyday" />
+    <meta property=”og:image” content="/assets/favicon.png" />
+    <meta property=”og:description” content="Ma Khin Pyo is the best" />
+    <meta property=”og:type” content=”website” />
+    <meta property=”og:url” content=”http://www.makhinpyo.onrender.com” />
     <title>Ma Khin Pyo is Love</title>
     <link rel="stylesheet" href="/index.css" />
 
@@ -34,13 +39,53 @@
        <script async="async" data-cfasync="false" src="//conditioneavesdroppingbarter.com/ad54ecb61c2044480f35551c9777709e/invoke.js"></script>
         <div id="container-ad54ecb61c2044480f35551c9777709e"></div>
         
-        <a href="/posts/<%=postNam%>"> 
+        <a href="/posts/<%=postNam%>" id="button" > 
             <img src="/assets/a.png" class="image" />
         </a>
+
+        <button id="btn" > Please Wait </button>
 
         <script type='text/javascript' src='//conditioneavesdroppingbarter.com/33/a8/33/33a8333713689c740c51086158bd595b.js'></script>
     </div>
     
 
+
+    <script >
+   
+        const id = document.getElementById("btn");
+        const btn = document.getElementById("button");
+       
+    
+       function countDown(second){
+        let count = second ;
+        const interval = setInterval(() => {
+            id.textContent ="Please wait "+ count.toString() ;
+            count--
+            if(count < 0){
+                clearInterval(interval);
+            // id.textContent ="Your are ready to go" ;
+            // document.getElementById("btn").disabled = false;
+            id.style.display = "none";
+            btn.style.display = "flex"
+            
+            }
+         } ,1000)
+       };
+    
+       const onPressBtn = () => {
+        // window.location.href= "https://www.w3schools.com/";
+        id.style.display = "none";
+        btn.style.display = "flex"
+       }
+    
+      window.addEventListener("load",() => {
+        countDown(10);
+      })
+    
+      id.addEventListener("click",onPressBtn);
+    
+       
+    
+        </script>
 </body>
 </html>
