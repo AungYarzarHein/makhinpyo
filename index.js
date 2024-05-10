@@ -15,9 +15,9 @@ app.set("view engine","ejs") ;
 app.get("/",async (req,res) => {
     const headerData = await getDoc(doc(db,"post-header","post1"))
     const data = await getDoc(doc(db,"details","post1")) ;
-   
+    // console.log(data.data().data)
     res.render("index",{data:data.data().data , headerData:headerData.data()});
-    // res.render("index",{headerData:})
+   
 
 })
 
