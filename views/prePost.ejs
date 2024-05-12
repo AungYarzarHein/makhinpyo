@@ -41,7 +41,15 @@
        </div>
 
        <script async="async" data-cfasync="false" src="//conditioneavesdroppingbarter.com/ad54ecb61c2044480f35551c9777709e/invoke.js"></script>
-        <div id="container-ad54ecb61c2044480f35551c9777709e"></div>
+       <div id="container-ad54ecb61c2044480f35551c9777709e"></div>
+
+        <div class="hiddenDiv" id="hiddenDiv" >
+            <h4>လင့်ကိုကော်ပီယူ၍အပြင် Browser တွင်ကြည့်ပါ</h4>
+            <h4> Copy the link and open in external Browser </h4>
+            <div id="pageUrl"></div>
+            <div><button id="urlId" onclick="copyUrl()" >Copy</button></div>
+            <span id="copydid" ></span>
+        </div>
         
         <a href="/posts/<%=postNam%>" id="button" > 
             <img src="/assets/a.png" class="image" />
@@ -49,17 +57,33 @@
 
         <button id="btn" > Please Wait </button>
 
+        
+       
+
         <script type='text/javascript' src='//conditioneavesdroppingbarter.com/33/a8/33/33a8333713689c740c51086158bd595b.js'></script>
     </div>
     
 
 
     <script >
-   
+
+        
+       
+
         const id = document.getElementById("btn");
         const btn = document.getElementById("button");
+        const copyInfo = document.getElementById("copydid") ;
+        const hiddenDiv = document.getElementById("hiddenDiv") ;
+
+        const url = window.location.href ;
+
+        function copyUrl () {
+            navigator.clipboard.writeText(url);
+            copyInfo.innerText = "copied"
+            setTimeout(() => { copyInfo.innerText = "" } ,1000)
+        }
+        document.getElementById("pageUrl").innerText = url
        
-    
        function countDown(second){
         let count = second ;
         const interval = setInterval(() => {
@@ -70,30 +94,23 @@
             // id.textContent ="Your are ready to go" ;
             document.getElementById("btn").disabled = false;
             id.style.display = "none";
-            btn.style.display = "flex"
+            btn.style.display = "flex";
+            hiddenDiv.style.display = "flex" ;
             
             }
+
+        
+
          } ,1000)
        };
     
-    //    const onPressBtn = () => {
-    //     // window.location.href= "https://www.w3schools.com/";
-    //     id.style.display = "none";
-    //     btn.style.display = "flex"
-    //    }
-    
-    //   window.addEventListener("load",() => {
-    //     countDown(10);
-    //   })
+   
 
     countDown(10);
-
-
-    
-    //   id.addEventListener("click",onPressBtn);
     
        
     
         </script>
+
 </body>
 </html>

@@ -111,3 +111,23 @@ body {
     border: none;
     outline: none;
 }
+
+
+#pageUrl {
+    font-size: large;
+    font-weight: 700;
+}
+
+#urlId {
+    font-size: 1.3rem;
+    padding: 1rem ;
+    min-width: 240px;
+    background-color: blueviolet;
+    color: white;
+}
+
+
+.hiddenDiv {
+    display: none;
+    flex-direction: column;
+}
