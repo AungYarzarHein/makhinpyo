@@ -44,9 +44,9 @@
        <div id="container-ad54ecb61c2044480f35551c9777709e"></div>
 
         <div class="hiddenDiv" id="hiddenDiv" >
-            <h4>လင့်ကိုကော်ပီယူ၍အပြင် Browser တွင်ကြည့်ပါ</h4>
-            <h4> Copy the link and open in external Browser </h4>
-            <div id="pageUrl"></div>
+            <h3>လင့်ကိုကော်ပီယူ၍အပြင် Browser တွင်ကြည့်ပါ</h3>
+            <h3> Copy the link and open in external Browser </h3>
+            <!-- <div id="pageUrl"></div> -->
             <div><button id="urlId" onclick="copyUrl()" >Copy</button></div>
             <span id="copydid" ></span>
         </div>
@@ -82,7 +82,7 @@
             copyInfo.innerText = "copied"
             setTimeout(() => { copyInfo.innerText = "" } ,1000)
         }
-        document.getElementById("pageUrl").innerText = url
+        // document.getElementById("pageUrl").innerText = url
        
        function countDown(second){
         let count = second ;
