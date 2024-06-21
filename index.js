@@ -1,15 +1,23 @@
 import express from "express";
 import "dotenv/config";
 
+import path from "path";
+import { fileURLToPath } from "url";
+
+
 import { db } from "./config.js";
 import { Firestore, collection, doc, getDoc, getDocs } from "firebase/firestore";
 
 
 const app = express();
 
-app.use(express.static("public"));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename) ;
+
+
+app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine","ejs") ;
-// app.set("views","views")
+app.set("views",path.join(__dirname,"views"))
 
 
 app.get("/",async (req,res) => {
